@@ -1,0 +1,46 @@
+[
+	{
+		"javascript": "./testing/AboutMe.jsx",
+		"typescript": "./testing/AboutMe.tsx"
+	},
+	{
+		"javascript": "./testing/basic2.js",
+		"typescript": "./testing/basic2.ts"
+	},
+	{
+		"javascript": "./testing/DropDownMenuStyles.js",
+		"typescript": "./testing/DropDownMenuStyles.ts"
+	},
+	{
+		"javascript": "./testing/HomeStyles.js",
+		"typescript": "./testing/HomeStyles.ts"
+	},
+	{
+		"javascript": "./testing/NavBar.test.jsx",
+		"typescript": "./testing/NavBar.test.tsx"
+	},
+	{
+		"javascript": "./testing/NotFoundError.jsx",
+		"typescript": "./testing/NotFoundError.tsx"
+	},
+	{
+		"javascript": "./testing/Page.jsx",
+		"typescript": "./testing/Page.tsx"
+	},
+	{
+		"javascript": "./testing/PageNumbers.js",
+		"typescript": "./testing/PageNumbers.ts"
+	},
+	{
+		"javascript": "./testing/ResponsiveComponent.jsx",
+		"typescript": "./testing/ResponsiveComponent.tsx"
+	},
+	{
+		"javascript": "./testing/routes.js",
+		"typescript": "./testing/routes.ts"
+	},
+	{
+		"javascript": "./testing/ViewPortContext.jsx",
+		"typescript": "./testing/ViewPortContext.tsx"
+	}
+]

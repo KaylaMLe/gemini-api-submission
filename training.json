@@ -1,0 +1,86 @@
+[
+	{
+		"javascript": "./training/AboutMe.test.jsx",
+		"typescript": "./training/AboutMe.test.tsx"
+	},
+	{
+		"javascript": "./training/AboutMeStyles.js",
+		"typescript": "./training/AboutMeStyles.ts"
+	},
+	{
+		"javascript": "./training/basic1.js",
+		"typescript": "./training/basic1.ts"
+	},
+	{
+		"javascript": "./training/constants.js",
+		"typescript": "./training/constants.ts"
+	},
+	{
+		"javascript": "./training/DropDownMenu.jsx",
+		"typescript": "./training/DropDownMenu.tsx"
+	},
+	{
+		"javascript": "./training/DropDownMenu.test.jsx",
+		"typescript": "./training/DropDownMenu.test.tsx"
+	},
+	{
+		"javascript": "./training/FlexboxFun.jsx",
+		"typescript": "./training/FlexboxFun.tsx"
+	},
+	{
+		"javascript": "./training/Home.jsx",
+		"typescript": "./training/Home.tsx"
+	},
+	{
+		"javascript": "./training/Home.test.jsx",
+		"typescript": "./training/Home.test.tsx"
+	},
+	{
+		"javascript": "./training/index.jsx",
+		"typescript": "./training/index.tsx"
+	},
+	{
+		"javascript": "./training/LinkButtons.jsx",
+		"typescript": "./training/LinkButtons.tsx"
+	},
+	{
+		"javascript": "./training/Login.jsx",
+		"typescript": "./training/Login.tsx"
+	},
+	{
+		"javascript": "./training/MainTitle.jsx",
+		"typescript": "./training/MainTitle.tsx"
+	},
+	{
+		"javascript": "./training/MainTitleStyles.js",
+		"typescript": "./training/MainTitleStyles.ts"
+	},
+	{
+		"javascript": "./training/NavBar.jsx",
+		"typescript": "./training/NavBar.tsx"
+	},
+	{
+		"javascript": "./training/NavBarStyles.js",
+		"typescript": "./training/NavBarStyles.ts"
+	},
+	{
+		"javascript": "./training/PageNumberContext.jsx",
+		"typescript": "./training/PageNumberContext.tsx"
+	},
+	{
+		"javascript": "./training/PageStyles.js",
+		"typescript": "./training/PageStyles.ts"
+	},
+	{
+		"javascript": "./training/ResponsiveNavComponent.jsx",
+		"typescript": "./training/ResponsiveNavComponent.tsx"
+	},
+	{
+		"javascript": "./training/ToggleStyledComponent.jsx",
+		"typescript": "./training/ToggleStyledComponent.tsx"
+	},
+	{
+		"javascript": "./training/ViewPortContext.test.jsx",
+		"typescript": "./training/ViewPortContext.test.tsx"
+	}
+]
