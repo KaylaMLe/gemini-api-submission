@@ -1,5 +1,6 @@
-import os
 import json
+import os
+
 
 # Get a list of all files in the training directory
 files = os.listdir("./testing")
@@ -18,12 +19,11 @@ for js_file in js_files:
 	# Determine the corresponding .ts/.tsx file name
 	ts_file = base_name + ".ts" if js_file.endswith(".js") else base_name + ".tsx"
 
-	# Add the mapping to the dictionary
 	file_mappings.append({
 		"javascript": f"./testing/{js_file}",
 		"typescript": f"./testing/{ts_file}"
 	})
 
 # Write the dictionary to a JSON file
-with open("testing.json", "w") as f:
+with open("training.json", "w") as f:
 	json.dump(file_mappings, f, indent=2)
