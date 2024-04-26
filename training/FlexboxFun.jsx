@@ -1,0 +1,161 @@
+import { css } from '@emotion/css';
+import React, { useState } from 'react';
+import { FLEXBOX_FUN } from '../../hooks/PageNumbers';
+import { Page } from './Page';
+
+export default function FlexboxFun() {
+	const [bgColor, setBgColor] = useState('#ffffff');
+	const [boxColor, setBoxColor] = useState('#000000');
+	const [alignment, setAlignment] = useState('baseline');
+	const [justification, setJustification] = useState('center');
+
+	const pageStyle = css({
+		color: '#9FE6EA',
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		justifyContent: 'space-around',
+		height: '100%',
+		width: '100%',
+	});
+
+	const boxStyle = css({
+		backgroundColor: boxColor,
+		height: '50px',
+		width: '50px',
+	});
+
+	const handleBgColorChange = (e) => {
+		setBgColor(e.target.value);
+	};
+
+	const handleBoxColorChange = (e) => {
+		setBoxColor(e.target.value);
+	};
+
+	const handleAlignmentChange = (e) => {
+		setAlignment(e.target.value);
+	};
+
+	const handleJustificationChange = (e) => {
+		setJustification(e.target.value);
+	};
+
+	return (
+		<Page pageNumber={FLEXBOX_FUN.pageNumber} title='Flexbox Fun'>
+			<div className={pageStyle}>
+				<SettingsRow>
+					<ColorChanger
+						label='Background color'
+						id='bgColorPicker'
+						currentColor={bgColor}
+						onChange={handleBgColorChange}
+					/>
+					<ColorChanger
+						label='Box color'
+						id='boxColorPicker'
+						currentColor={boxColor}
+						onChange={handleBoxColorChange}
+					/>
+					<SelectInput
+						label='align-items'
+						id='alignmentChanger'
+						optionValues={['baseline', 'center', 'end', 'flex-end', 'flex-start', 'inherit',
+							'initial', 'normal', 'revert', 'revert-layer', 'self-end', 'self-start', 'start',
+							'stretch', 'unset']}
+						currentValue={alignment}
+						onChange={handleAlignmentChange}
+					/>
+					<SelectInput
+						label='justify-content'
+						id='justificationChanger'
+						optionValues={['center', 'end', 'flex-end', 'flex-start', 'inherit', 'left', 'normal',
+							'revert', 'revert-layer', 'right', 'space-around', 'space-between', 'space-evenly',
+							'start', 'stretch', 'unset']}
+						currentValue={justification}
+						onChange={handleJustificationChange}
+					/>
+				</SettingsRow>
+				<ComponentsBox bgColor={bgColor} alignItems={alignment} justifyContent={justification}>
+					<div className={boxStyle}></div>
+				</ComponentsBox>
+			</div>
+		</Page>
+	);
+}
+
+function SettingsRow({ children }) {
+	const settingsRowStyle = css({
+		display: 'flex',
+		alignItems: 'flex-end',
+		justifyContent: 'center',
+		gap: '1rem',
+	});
+
+	return (
+		<div className={settingsRowStyle}>
+			{children}
+		</div>
+	);
+}
+
+function ColorChanger({ label, id, currentColor, onChange }) {
+	const changeBgColorStyle = css({
+		display: 'flex',
+		alignItems: 'center',
+		gap: '0.5rem',
+	});
+
+	return (
+		<div className={changeBgColorStyle}>
+			<label htmlFor={id}>{label}</label>
+			<input
+				type='color'
+				id={id}
+				name={id}
+				value={currentColor}
+				onChange={onChange}
+			/>
+		</div>
+	);
+}
+
+function SelectInput({ label, id, optionValues, currentValue, onChange }) {
+	const selectInputStyle = css({
+		display: 'flex',
+		alignItems: 'center',
+		gap: '0.5rem',
+	});
+
+	const options = [];
+
+	for (let i = 0; i < optionValues.length; i++) {
+		options.push(<option key={i} value={optionValues[i]}>{optionValues[i]}</option>);
+	}
+
+	return (
+		<div className={selectInputStyle}>
+			<label htmlFor={id}>{label}</label>
+			<select id={id} value={currentValue} onChange={onChange}>
+				{options}
+			</select>
+		</div>
+	);
+}
+
+function ComponentsBox({ bgColor, alignItems, justifyContent, children }) {
+	const bgStyle = css({
+		display: 'flex',
+		alignItems: alignItems,
+		justifyContent: justifyContent,
+		backgroundColor: bgColor,
+		height: '90%',
+		width: '95%',
+	});
+
+	return (
+		<div className={bgStyle}>
+			{children}
+		</div>
+	);
+}
