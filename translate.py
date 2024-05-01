@@ -1,5 +1,4 @@
 import google.generativeai as genai
-from load_data import create_trained_model
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -69,10 +68,10 @@ def test_prompt(id: str) -> None:
 	"""
 	typescript_translation = model.generate_content(javascript_code)
 
-	print("Original JavaScript:")
+	print(">>> Original JavaScript <<<\n")
 	print(javascript_code)
-	print("\nTypeScript Translation:")
+	print("\n>>> TypeScript Translation <<<\n")
 	print(typescript_translation.text)
 
 if __name__ == "__main__":
-	test_prompt("js-to-ts-model2")
+	test_prompt("js-to-ts-model-001")

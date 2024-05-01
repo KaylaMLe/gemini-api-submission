@@ -3,7 +3,7 @@ import os
 
 
 # Get a list of all files in the training directory
-files = os.listdir("./testing")
+files = os.listdir("./training")
 
 # Filter out the .js and .jsx files
 js_files = [f for f in files if f.endswith(".js") or f.endswith(".jsx")]
@@ -20,8 +20,8 @@ for js_file in js_files:
 	ts_file = base_name + ".ts" if js_file.endswith(".js") else base_name + ".tsx"
 
 	file_mappings.append({
-		"javascript": f"./testing/{js_file}",
-		"typescript": f"./testing/{ts_file}"
+		"javascript": f"./training/{js_file}",
+		"typescript": f"./training/{ts_file}"
 	})
 
 # Write the dictionary to a JSON file
