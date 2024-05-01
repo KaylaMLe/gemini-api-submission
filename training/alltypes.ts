@@ -22,9 +22,20 @@ export interface FlowerProps {
 	rotation: number;
 };
 
+export interface IsMobileContextType {
+	isMobile: boolean;
+	setIsMobile: (isMobile: boolean) => void;
+}
+
 export interface PageType {
 	pageNumber: number;
 	link: string;
+}
+
+export interface Person {
+	name: string;
+	age: number;
+	isStudent: boolean;
 }
 
 export interface ResponsiveNavStyles {
