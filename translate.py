@@ -1,5 +1,6 @@
 import google.generativeai as genai
 import matplotlib.pyplot as plt
+import os
 import pandas as pd
 import seaborn as sns
 
@@ -74,4 +75,6 @@ def test_prompt(id: str) -> None:
 	print(typescript_translation.text)
 
 if __name__ == "__main__":
-	test_prompt("js-to-ts-model-001")
+	#test_prompt("js-to-ts-model-001")
+	#check_model("js-to-ts-model-007")
+	evaluate_tuned_model("js-to-ts-model-011")
